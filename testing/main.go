@@ -7,6 +7,11 @@ import (
 )
 
 func main() {
-	fmt.Println("Loading font")
-	senses.LoadFont("./resources/fonts", "fnt.json")
+	fmt.Println("Hello senses")
+	window := senses.NewWindow("Senses", 1280, 720)
+	container := senses.NewContainer(senses.Vertical, window.Theme)
+	text := senses.NewTextVisual("<{HELLO}, [SENSES]>;", window.Theme)
+	window.SetContainer(container)
+	container.Add(text)
+	window.Show()
 }
