@@ -8,5 +8,5 @@ import (
 
 func main() {
 	fmt.Println("Loading font")
-	senses.LoadFont("")
+	senses.LoadFont("./resources/fonts", "fnt.json")
 }
